@@ -11,6 +11,7 @@
     background-size: cover;
     position: relative;
 }
+/*----- navbar -----*/
 nav{
     display: flex;
     padding: 2% 6%;
@@ -176,7 +177,47 @@ nav img{
     cursor: pointer;
     padding: 18px 0;
 }
+/*------------------------------------------- PAGE DESTINATIONS -----------------------------*/
 
+/*----- destinations -----*/
+.des-header{
+    height: 100vh;
+    width: 100%;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.20),rgba(0, 0, 0, 0.20)),url(images/destinatios.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.des-header h1{
+    margin-top: 90px;
+    font-size: 50px;
+}
+.des-header .video{
+    margin-top: 100px;
+    background-color: #000000;
+}
+
+/*----- des-info -----*/
+.destinations{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.destinations .info{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.destinations .info img{
+    width: 100%;
+}
+.destinations h1{
+    padding-top: 0;
+}
+.destinations p{
+    padding: 15px 0 25px;
+}
 
 
 
