@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mountain project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<body>
+    <section class="contact-header">
+        <nav>
+            <a href="intex.html"><img src="images/logo.png" alt="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i> 
+                <ul>
+                    <li><a href="intex.html">HOME</a></li>
+                    <li><a href="destinations.html">DESTINATIONS</a></li>
+                    <li><a href="maps.html">MAPS</a></li>
+                    <li><a href="sights.html">SIGHTS</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+    <!---------------------------- CONTACT ---------------------->
+      
+    <section class="contact">
+        <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+                <h2>Contact Us</h2>
+                <input type="text" class="field" placeholder="your name">
+                <input type="email" class="field" placeholder="youremail">
+                <input type="text" class="field" placeholder="your phone">
+                <textarea class="area" placeholder="message"></textarea>
+                <button class="btn">Send</button>
+            </div>
+        </div>
+    </section>
+    
+
+    
+
+    <!------------------------- footer ---------------------------->
+
+    <section class="footer">
+        <h4>Thank you for visit us <i class="fa fa-heart"></i></h4>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+        </div>
+    </section>
+
+    <!------------- js menu show\hide ------------->
+
+    <script>
+        //@ts-check
+        'use strict'
+
+        var navLinks =document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+</body>
+</html>
