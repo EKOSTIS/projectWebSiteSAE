@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mountain project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<body>
+    <section class="des-header">
+        <nav>
+            <a href="intex.html"><img src="images/logo.png" alt="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i> 
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">DESTINATIONS</a></li>
+                    <li><a href="">MAPS AND SLOPES</a></li>
+                    <li><a href="">SIGHTS</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <h1>Destinations</h1>
+        <div class="video">
+            <h2>video will be here</h2>
+        </div>
+
+    </section>
+
+    <!------------------------ Destinations -------------------------->
+
+    <section class="destinations">
+
+        <div class="info">
+            <h1>VASILITSA</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam culpa, quae ullam molestias quam adipisci sint a id ratione blanditiis vel enim! Incidunt, enim tenetur. Sunt repudiandae veritatis cupiditate dolorum iste architecto fugit aspernatur accusantium deleniti voluptatum consequatur ad ratione nobis deserunt, illum non assumenda earum repellendus commodi aperiam. Mollitia tempore ratione optio? A ut nam fugit quae quasi architecto, commodi esse reprehenderit dolorum maxime non. Odit est blanditiis repellendus ducimus nostrum reprehenderit eius, velit illum officia deleniti tenetur? Reiciendis?</p>
+            <div id="vasilitsa">
+                <img src="images/vasilitsa.jpg">
+            </div>
+        </div>
+        <div class="info">
+            <h1>PARNASSOS</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo velit quae fuga earum eligendi, cumque illo pariatur vitae recusandae incidunt eveniet, debitis facere voluptatum placeat a dolores veniam accusantium fugiat odit, commodi blanditiis. Quisquam, fugit animi quam optio libero in alias est voluptatum qui adipisci nulla ex illum velit rerum quis odit ipsa ipsum inventore id, eum asperiores eos? Dolorem at, repellat animi perspiciatis harum, nulla, reprehenderit natus eligendi quia veniam temporibus veritatis voluptatibus odit placeat fugiat quisquam facilis molestias.</p>
+        
+            <div id="parnassos">
+                <img src="images/parnassos-night.jpg">
+            </div>
+        </div>    
+               
+    </section>
+    
+
+    <!---------------------------- footer ---------------------------->
+
+    <section class="footer">
+        <h4>Thank you for visit us <i class="fa fa-heart"></i></h4>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+        </div>
+    </section>
+
+<!------------- js menu show\hide ------------->
+
+    <script>
+        //@ts-check
+        'use strict'
+
+        var navLinks =document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+</body>
+</html>
