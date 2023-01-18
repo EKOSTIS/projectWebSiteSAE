@@ -103,9 +103,9 @@ nav img{
     color: #fff;
 }
 
-/*----------------- waither ----------------*/
+/*----------------- waether ----------------*/
 
-.waither{
+.waether{
     min-height: 100vh;
     width: 100%;
     margin: auto;
@@ -116,7 +116,7 @@ nav img{
     background-size: cover;
     position: relative;
 }
-.about-waither{
+.about-waether{
     width: 90%;
     color: rgb(0, 0, 0);
     position: absolute;
@@ -125,15 +125,15 @@ nav img{
     transform: translate(-50%,-50%);
     text-align: center;
 }
-.about-waither h1{
+.about-waether h1{
     font-size: 80px;
 }
-.about-waither p{
+.about-waether p{
     margin: 10px 0 40px;
     font-size: 15px;
     color: rgb(0, 0, 0);
 }
-/* .waither-banner h2{
+/* .waether-banner h2{
     color: #000000;
     margin: 0 0 3px;
     padding: 2px;
@@ -141,7 +141,7 @@ nav img{
     text-align: center;
     width: 100%;
 } */
-.waither-banner h2 a{
+.waether-banner h2 a{
     color: #000000;
     margin: 0 0 3px;
     padding: 2px;
@@ -149,14 +149,14 @@ nav img{
     text-align: center;
     width: 100%;
 }
-.waither-row{
+.waether-row{
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 25%;
     display: flex;
     justify-content: space-between;
 }
-.waither-banner{
+.waether-banner{
     flex-basis: 31%;
     border-radius: 10px;
     margin-bottom: 5%;
