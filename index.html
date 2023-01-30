@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mountain project</title>
+    <script src="showHideMenu.js" defer></script>
+    <script src="slideshow.js" defer></script>
+    <link rel="stylesheet" href="slideshow.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,8 +46,15 @@
         <div class="about-gallery">
             <h1>GALLERY</h1>
             <p>You Can Find Photos Of All Our Destinations</p>
+        
+            <div class="container">
+                <button id="left-btn"><i class="arrow"></i></button>
+                <img id="carousel" src="" alt="">
+                <button id="right-btn"><i class="arrow"></i></button>
+                <button id="play">Play</button>
+                <button id="stop">Stop</button>
+            </div>  
         </div>
-
     </section>
 
     <!------------- kairos gia olous tous proorismous -------------->
@@ -99,12 +109,12 @@
         //@ts-check
         'use strict'
 
-        var navLinks =document.getElementById("navLinks");
+        var navLinks = document.getElementById("navLinks");
         function showMenu(){
             navLinks.style.right = "0";
         }
         function hideMenu(){
-            navLinks.style.right = "-200px";
+            navLinks.style.right = "-300px";
         }
 
     </script>

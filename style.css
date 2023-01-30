@@ -72,7 +72,7 @@ nav img{
 }
 
 
-/* ------------gallery -----------*/
+/* /* ------------gallery -----------*/
 
 .gallery{
     min-height: 100vh;
@@ -101,7 +101,7 @@ nav img{
     margin: 10px 0 40px;
     font-size: 15px;
     color: #fff;
-}
+} 
 
 /*----------------- waether ----------------*/
 
@@ -366,7 +366,7 @@ nav img{
     border-radius: 2px;
     background-color: #2ecc71;
 }
-.field{
+.input-group{
     width: 100%;
     padding: 0.5rem 1rem;
     outline: none;
@@ -376,12 +376,12 @@ nav img{
     margin-bottom: 22px;
     transition: .3s;
 }
-.field:hover{
+.input-group:hover{
     background-color: rgba(0,0,0,0.1);
 }
-.field:focus{
+.input-group:focus{
     background-color: #fff;
-    border: 2px solid rgba(30,85,250,0.47);
+    border: 2px solid rgba(255, 0, 0, 0.47);
 }
 .area{
     max-height: 150px;
@@ -395,11 +395,18 @@ nav img{
     cursor: pointer;
     outline: none;
     border: none;
-    color: #fff;
+    color: rgb(0, 0, 0);
     transition: .3s;
 }
 .btn:hover{
     background-color: #27ae60;
+}
+.input-group span{
+    position: absolute;
+    bottom: 12px;
+    right: 17px;
+    font-size: 14px;
+    color: rgb(255, 0, 0);
 }
 
 
@@ -448,8 +455,8 @@ nav .fa{
 
 /*----- gallery ----*/
 @media(max-width: 700px){
-.about-gallery h1{
-        font-size: 20px;
+    .about-gallery h1{
+            font-size: 20px;
     }
 }
 /*----- waither -----*/

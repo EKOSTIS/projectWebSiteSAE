@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mountain project</title>
+    <script src="contact.js" defer></script>
+    <script src="showHideMenu.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,12 +39,27 @@
         <div class="contact-box">
             <div class="left"></div>
             <div class="right">
-                <h2>Contact Us</h2>
-                <input type="text" class="field" placeholder="your name">
-                <input type="email" class="field" placeholder="youremail">
-                <input type="text" class="field" placeholder="your phone">
-                <textarea class="area" placeholder="message"></textarea>
-                <button class="btn">Send</button>
+                <form>    
+                    <h2>Contact Us</h2>
+                    <div id="input-group">
+                        <input type="text" placeholder="your name" id="contact-name" onkeyup="validateName()">
+                        <span id="name-error"></span>
+                    </div>
+                    <div id="input-group">
+                        <input type="email" placeholder="your email" id="contact-email" onkeyup="validateEmail()">
+                        <span id="email-error"></span>
+                    </div>
+                    <div id="input-group">
+                        <input type="phone" placeholder="your phone" id="contact-phone" onkeyup="validatePhone()">
+                        <span id="phone-error"></span>
+                    </div>
+                    <div id="input-group">
+                        <textarea placeholder="message" id="contact-message" onkeyup="validateMessage()"></textarea>
+                        <span id="message-error"></span>
+                    </div>
+                    <button class="btn" onclick="return validateForm()">send</button>
+                    <span id="submit-error"></span>
+                </form>
             </div>
         </div>
     </section>
@@ -60,21 +77,5 @@
             <i class="fa fa-twitter"></i>
         </div>
     </section>
-
-    <!------------- js menu show\hide ------------->
-
-    <script>
-        //@ts-check
-        'use strict'
-
-        var navLinks =document.getElementById("navLinks");
-        function showMenu(){
-            navLinks.style.right = "0";
-        }
-        function hideMenu(){
-            navLinks.style.right = "-200px";
-        }
-
-    </script>
 </body>
 </html>
