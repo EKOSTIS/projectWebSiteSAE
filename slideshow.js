@@ -49,7 +49,7 @@ function playButton() {
     }else {
         i = 0;
     }
-        setTimeout("playSlide()",time)
+        setTimeout("playButton()",time)
     }
 window.onload = playSlide;
     
