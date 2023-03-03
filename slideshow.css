@@ -1,86 +1,81 @@
 *, *::before, *::after {
     box-sizing: border-box;
-}
+} 
 .gallery{
+    display: flex;
     max-width: 100%;
-    height: 140vh;
+    height: 100vh;
     width: 100%;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
-    background-image: -webkit-linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40)),url(images/ksaplostra.jpg);
-    background-position: center;
-    background-size: cover;
+    background-color: rgb(0, 183, 255);
     position: relative;
     object-position: center;
 }
-.about-gallery{
-    width: 100%;
+
+.gallery > .about-gallery {
+    display: flex;
+    width: 70%;
     color: #fff;
     position: absolute;
-/*     top: 10%; */
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    object-position: center;
+    transform: translate(-50%, -50%);
 }
+
 .about-gallery h1{
     font-size: 80px;
 }
+
 .about-gallery p{
     margin: 10px 0 40px;
     font-size: 15px;
     color: #fff;
 }
 
-.container {
-    width: 500px;
-    height: 500px;
+.carousel-container {
     display: flex;
+    flex-direction: column;
+    position: relative;
     justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.75)
+    align-items: center;
+    width: 70%;
+    margin: auto;
 }
 
-.container img {
+.carousel {
     width: 100%;
-    z-index: -2;
+    height: 700px;
+    text-align: center;
 }
-
-button {
-    height: 10%;
-    border: none;
-    outline: none;
-    background: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    padding: 1em;
+  
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
-
-button .arrow {
-    border: solid #fff;
-    border-width: 0 4px 4px 0;
-    display: inline-block;
-    padding: 10px;
-    transition: transform 0.3s ease-out;
-    outline: none;
+  
+.carousel-controls button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
 }
-
-#right-btn {
-    margin: auto 0 auto -2em;
+  
+.left-button {
+    color: red;
+    position: absolute;
+    left: 0;
 }
-
-#right-btn .arrow {
-    transform: rotate(-45deg);
+  
+.right-button {
+    color: red;
+    position: absolute;
+    right: 0;
 }
-
-#left-btn {
-    z-index: 0;
-    margin: auto -2em auto 0;
-}
-
-#left-btn .arrow {
-    transform: rotate(135deg);
-}
+  
 #play, #stop {
     cursor: pointer;
     position: relative;
@@ -100,18 +95,4 @@ button .arrow {
   background-color: red;
   color: black;
   transition: .2s
-}
-.dot {
-    cursor: pointer;
-    height: 13px;
-    width: 13px;
-    margin: 0 2px;
-    background-color: rgb(255, 0, 0);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-        
-.active, .dot:hover {
-    background-color: #000000;
 }

@@ -70,53 +70,40 @@ nav img{
     font-size: 15px;
     color: #fff;
 }
+.about-website img{
+    height: 500px;
+}
+#Layer_1{
 
+    animation: dash 5s;
+}
+
+@keyframes wheel{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
 
 /* /* ------------gallery -----------*/
 
-.gallery{
-    min-height: 100vh;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-    background-image: -webkit-linear-gradient(rgba(0,0,0,0.20),rgba(0,0,0,0.20)),url(images/ksaplostra.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-.about-gallery{
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.about-gallery h1{
-    font-size: 80px;
-}
-.about-gallery p{
-    margin: 10px 0 40px;
-    font-size: 15px;
-    color: #fff;
-} 
 
 /*----------------- waether ----------------*/
 
-.waether{
+.weather{
     min-height: 100vh;
     width: 100%;
     margin: auto;
     text-align: center;
     padding-top: 100px;
-    background-image: -webkit-linear-gradient(rgba(0,0,0,0.20),rgba(0,0,0,0.20)),url(images/Waither.jpg);
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0.10)),url(images/Waither.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
 }
-.about-waether{
+.about-weather{
     width: 90%;
     color: rgb(0, 0, 0);
     position: absolute;
@@ -125,23 +112,15 @@ nav img{
     transform: translate(-50%,-50%);
     text-align: center;
 }
-.about-waether h1{
+.about-weather h1{
     font-size: 80px;
 }
-.about-waether p{
+.about-weather p{
     margin: 10px 0 40px;
     font-size: 15px;
     color: rgb(0, 0, 0);
 }
-/* .waether-banner h2{
-    color: #000000;
-    margin: 0 0 3px;
-    padding: 2px;
-    font: bold 13px/1.2 Verdana;
-    text-align: center;
-    width: 100%;
-} */
-.waether-banner h2 a{
+.weather-banner h2 a{
     color: #000000;
     margin: 0 0 3px;
     padding: 2px;
@@ -149,14 +128,14 @@ nav img{
     text-align: center;
     width: 100%;
 }
-.waether-row{
+.weather-row{
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 25%;
     display: flex;
     justify-content: space-between;
 }
-.waether-banner{
+.weather-banner{
     flex-basis: 31%;
     border-radius: 10px;
     margin-bottom: 5%;
@@ -183,10 +162,11 @@ nav img{
 /*------------------------------------------- PAGE DESTINATIONS -----------------------------*/
 
 /*----- destinations -----*/
+
 .des-header{
     height: 100vh;
     width: 100%;
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.20),rgba(0, 0, 0, 0.20)),url(images/destinatios.jpg);
+    background-image: -webkit-linear-gradient(rgba(14, 7, 7, 0.572),rgba(13, 6, 6, 0.515)),url(images/destinatios.jpg);
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -203,25 +183,38 @@ nav img{
 
 /*----- des-info -----*/
 .destinations{
+    /* display: flex; */
+    /* flex-direction: column; */
     width: 80%;
     margin: auto;
     padding-top: 80px;
     padding-bottom: 50px;
 }
 .destinations .info{
-    flex-basis: 48%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 10%;
+    flex-basis: auto;
     padding: 30px 2px;
 }
 .destinations .info img{
-    width: 100%;
+    display: flex;
+    height: 400px;
+    width: 400px;
+    transition: width 2s, height 2s, background-image 2s, transform 2s;
 }
+.destinations .info img:hover{
+    width: 700px;
+    height: 700px;
+}
+
 .destinations h1{
-    padding-top: 0;
     text-align: center;
 }
-.destinations p{
-    padding: 15px 0 25px;
-}
+/* .destinations p{
+    
+} */
 
 
 /*------------------------------------------- PAGE MAPS -----------------------------*/
@@ -266,10 +259,15 @@ nav img{
 }
 /*------------------------------------- SIGHTS --------------------------*/
 
+.sights-header p {
+    width: 50%;
+    align-items: center;
+    margin: auto;
+}
 .sights-header{
     height: 80vh;
     width: 100%;
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.20),rgba(0, 0, 0, 0.20)),url(images/sights-header.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.10),rgba(0, 0, 0, 0.10)),url(images/destinatios.jpg);
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -280,7 +278,7 @@ nav img{
 }
 .sights-header p{
     font-size: 20px;
-    background-color: #0000005f;
+    background-color: rgba(0, 0, 0, 0.701);
 }
 /*------ sights-info -----*/
 
@@ -289,20 +287,72 @@ nav img{
     margin: auto;
     text-align: center;
     padding-top: 100px;
-    background-image: url(images/sightsbackground.jpg);
+    background-color: #00eaff;
 }
 .sights h1{
     color: black;
     font-size: 40px;
     font-weight: 600;
 }
-.sights p{
+.sights-row p{
     color: black;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.728);
     font-size: 22px;
     font-weight: 300;
     line-height: 25px;
-    padding: 10px;
+    padding: auto;
+    width: 70%;
+    align-items: center;
+    margin: auto;
+}
+#infoArahova{
+    animation-name: example;
+    animation-duration: 3s;
+}
+@keyframes example{
+    from{border-radius: 95%;}
+    to{border-radius: 5%;}
+}
+
+
+#infoDelfoi{
+    animation-name: delfoi;
+    animation-duration: 3s;
+}
+@keyframes delfoi{
+    0% {
+      transform: scale(0) rotate(0deg);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) rotate(720deg);
+      opacity: 1;
+    }
+}
+
+#infoAgoriani{
+    animation-name: agoriani;
+    animation-duration: 3s;
+}
+@keyframes agoriani {
+    0%    { opacity: 0; }
+    20%   { opacity: 1; }
+    80%   { opacity: 0; }
+    100%  { opacity: 1; }
+  }
+
+#infoPolidrosos{
+    animation-name: polidrosos;
+    animation-duration: 4s;
+    position: relative;
+}
+@keyframes polidrosos {
+    12.5% {left: -50px;}
+    25% {left: 50px;}
+    37.5% {left: -25px;}
+    50% {left: 25px;}
+    62.5% {left: -10px;}
+    75% {left: 10px;}
 }
 
 
@@ -317,8 +367,6 @@ nav img{
     align-items: center;
     width: 100%;
     height: 100vh;
-    /* background: url(images/contactus.jpg) no-repeat center;
-    background-size: cover; */
 }
 .contact::after{
     content: '';
@@ -333,14 +381,15 @@ nav img{
     filter: blur(50px);
 }
 .contact-box{
-    max-width: 850px;
+    width: 90%;
+    height: 70%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #fff;
-    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+    background-color: #ffffff;
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.6);
 }
 .contact-box .left{
     height: 100%;
@@ -372,7 +421,7 @@ nav img{
     outline: none;
     border: 2px solid rgba(0, 0, 0, 0);
     background-color: rgba(230, 230, 230, 0.6);
-    font-size: 1.1rem;
+    font-size: 2rem;
     margin-bottom: 22px;
     transition: .3s;
 }
@@ -385,7 +434,8 @@ nav img{
 }
 .area{
     max-height: 150px;
-    max-width: 300px;
+    max-width: 500px;
+    width: 400px;
 }
 .btn{
     width: 100%;
@@ -454,9 +504,10 @@ nav .fa{
 }
 
 /*----- gallery ----*/
+
 @media(max-width: 700px){
-    .about-gallery h1{
-            font-size: 20px;
+    .gallery h1{
+        height: 50%;
     }
 }
 /*----- waither -----*/
@@ -487,6 +538,7 @@ nav .fa{
         grid-template-columns: 1fr;
     }
     .contact-box .left{
-        height: 100px;
+        height: 300px;
+        width: auto;
     }
 }

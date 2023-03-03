@@ -2,17 +2,17 @@ const img = document.getElementById('carousel');
 const rightBtn = document.getElementById('right-btn');
 const leftBtn = document.getElementById('left-btn');
 
-var playButton = document.getElementById("play");
+const playButton = document.getElementById("play");
 const stopButton = document.getElementById("stop");
 const time = 2000;
-var i = 0;
+let i = 0;
 
 let pictures = [
-    '..//images/slide1.jpg',
-    '..//images/slide2.jpg',
-    '..//images/slide3.jpg',
-    '..//images/slide4.jpg',
-    '..//images/slide5.jpg'
+    '../images/slide1.jpg',
+    '../images/slide2.jpg',
+    '../images/slide3.jpg',
+    '../images/slide4.jpg',
+    '../images/slide5.jpg'
 ]
 
 img.src = pictures[0];
@@ -38,25 +38,29 @@ const moveLeft = () => {
     position--;
 }
 
-rightBtn.addEventListener("click", moveRight);
-leftBtn.addEventListener("click", moveLeft);
+let intervalId;
 
-function playButton() {
-    document.carousel.src = pictures[i];
-
-    if( i < images.length - 1){
-        i++
-    }else {
-        i = 0;
+function playSlide() {
+    // Αν η αναπαραγωγή είναι ήδη σε εξέλιξη, μην ξεκινήσετε ένα άλλο διάστημα
+    if (intervalId) {
+        return;
     }
-        setTimeout("playButton()",time)
-    }
-window.onload = playSlide;
-    
+    intervalId = setInterval(() => {
+        moveRight();
+    }, time);
+    playButton.style.display = "none";
+    stopButton.style.display = "block";
+}
+  
 function stopSlide() {
-    clearTimeout(slideInterval);
+    clearInterval(intervalId);
+    intervalId = null;
     stopButton.style.display = "none";
     playButton.style.display = "block";
-    }
+}
 
-playButton.addEventListener("click", playButton());
+playButton.addEventListener("click", playSlide);
+stopButton.addEventListener("click", stopSlide);
+
+rightBtn.addEventListener("click", moveRight);
+leftBtn.addEventListener("click", moveLeft);
